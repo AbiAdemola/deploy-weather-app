@@ -191,3 +191,9 @@ footer {
   background-color: #42a5f5;
   color: white;
 }
+.open-source {
+  color: #42a5f5;
+}
+.open-source:hover {
+  background-color: #e8f3dc;
+}

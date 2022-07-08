@@ -1,112 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Wireframe to JS
-    </title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>
-      WEATHER TODAY
-    </h1>
-    <br />
+
+<head>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Wireframe to JS
+  </title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>
+    WEATHER TODAY
+  </h1>
+  <br />
+  <div class="row">
+    <div class="col-10">
+      <form class="search-form">
+        <div class="mb-3">
+          <input type="location" placeholder="Enter a town, city or postcode" class="form-control" />
+          <input type="submit" value="Search" class="btn" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="current-location">
+    📍 Find my current location
+  </div>
+  <div class="container1">
     <div class="row">
-      <div class="col-10">
-        <form class="search-form">
-          <div class="mb-3">
-            <input
-              type="location"
-              placeholder="Enter a town, city or postcode"
-              class="form-control"
-            />
-            <input type="submit" value="Search" class="btn" />
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="current-location">
-      📍 Find my current location
-    </div>
-    <div class="container1">
-      <div class="row">
-        <div class="col-8 city">
-          <strong class="spec">Salford, UK</strong>
-          <div class="row">
-            <div class="col-8 rainday">
-              <span class="date"> Wednesday 11:00</span>
-              <br />
-              <span class="description"> Mostly Cloudy with Rain</span>
-            </div>
+      <div class="col-8 city">
+        <strong class="spec">Salford, UK</strong>
+        <div class="row">
+          <div class="col-8 rainday">
+            <span class="date"> Wednesday 11:00</span>
+            <br />
+            <span class="description"> Mostly Cloudy with Rain</span>
           </div>
         </div>
-        <div class="col-6 degree">
-          <strong class="specs"><span class="emoji"> 🌧️</span><span class="celfah-data">11</span><span class="units"><a href="#" id="celcius">°C</a>|<a href="#" id="fahrenheit">°F</a></strong>
-          <div class="row">
-            <div class="col-6 status">
-              <span class="unit-word">Pressure:</span> <span class="pressure"> 1005.9</span><span class="symbol-unit">mb</span>
-              <br />
-              <span class="unit-word">Humidity:</span> <span class="humidity"> 58</span><span class="symbol-unit">%</span>
-              <br />
-              <span class="unit-word">Wind:</span> <span class="wind"> 3</span><span class="symbol-unit">mph</span>
-            </div>
+      </div>
+      <div class="col-6 degree">
+        <strong class="specs"><span class="emoji"> 🌧️</span><span class="celfah-data">11</span><span class="units"><a
+              href="#" id="celcius">°C</a>|<a href="#" id="fahrenheit">°F</a></strong>
+        <div class="row">
+          <div class="col-6 status">
+            <span class="unit-word">Pressure:</span> <span class="pressure"> 1005.9</span><span
+              class="symbol-unit">mb</span>
+            <br />
+            <span class="unit-word">Humidity:</span> <span class="humidity"> 58</span><span class="symbol-unit">%</span>
+            <br />
+            <span class="unit-word">Wind:</span> <span class="wind"> 3</span><span class="symbol-unit">mph</span>
           </div>
         </div>
       </div>
     </div>
-    <span class="forecast">
-      Daily forecast
-    </span>
-    <div class="container2 future">
-      <div class="row">
-        <div class="col">
-          <strong class="date-bgcolor"> Thurs 02</strong>
-          <br /><span class="emoji">⛅ </span> <br />
-          19°C
-        </div>
-        <div class="col">
-          <strong class="date-bgcolor">Fri 03</strong>
-          <br />️ <span class="emoji"> 🌧️</span> <br />
-          12°C
-        </div>
-        <div class="col">
-          <strong class="date-bgcolor">Sat 04</strong>
-          <br /><span class="emoji">⛅ </span> <br />
-          16°C
-        </div>
-        <div class="col">
-          <strong class="date-bgcolor">Sun 05</strong>
-          <br />
-          <span class="emoji">☀️</span> <br />
-          21°C
-        </div>
-        <div class="col eight">
-          <strong class="date-bgcolor">Mon 06</strong>
-          <br />
-          <span class="emoji">🌧️ </span> <br />
-          17°C
-        </div>
+  </div>
+  <span class="forecast">
+    Daily forecast
+  </span>
+  <div class="container2 future">
+    <div class="row">
+      <div class="col">
+        <strong class="date-bgcolor"> Thurs 02</strong>
+        <br /><span class="emoji">⛅ </span> <br />
+        19°C
+      </div>
+      <div class="col">
+        <strong class="date-bgcolor">Fri 03</strong>
+        <br />️ <span class="emoji"> 🌧️</span> <br />
+        12°C
+      </div>
+      <div class="col">
+        <strong class="date-bgcolor">Sat 04</strong>
+        <br /><span class="emoji">⛅ </span> <br />
+        16°C
+      </div>
+      <div class="col">
+        <strong class="date-bgcolor">Sun 05</strong>
+        <br />
+        <span class="emoji">☀️</span> <br />
+        21°C
+      </div>
+      <div class="col eight">
+        <strong class="date-bgcolor">Mon 06</strong>
+        <br />
+        <span class="emoji">🌧️ </span> <br />
+        17°C
       </div>
     </div>
+  </div>
+  <br />
+  <div class="user">
+    <span class="personalise"> PERSONALISE YOUR WEATHER</span>
     <br />
-    <div class="user">
-      <span class="personalise"> PERSONALISE YOUR WEATHER</span>
-      <br />
-      Add your favourite place and get a daily notification of the weather.
-      <br />
-      <button class="owned">Sign in</button>
-      <button class="register">Register</button>
-    </div>
-    <footer>
-      Open source code, by  <a href="https://www.linkedin.com/in/abi-ademola" target="_blank">
+    Add your favourite place and get a daily notification of the weather.
+    <br />
+    <button class="owned">Sign in</button>
+    <button class="register">Register</button>
+  </div>
+  <footer>
+    <a href="https://github.com/AbiAdemola/deploy-weather-app/tree/master-of-main" target="_blank" class="open-source">
+      Open source code</a>, by <a href="https://www.linkedin.com/in/abi-ademola" target="_blank">
       <strong class="coder">Abimbola Ademola</a> </strong>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
