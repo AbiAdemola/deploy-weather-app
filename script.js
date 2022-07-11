@@ -47,8 +47,11 @@ function showWeatherCondition(weatherResult) {
   let descriptionValue = document.querySelector(".weather-description");
   descriptionValue.innerHTML = weatherResult.data.weather[0].description;
 
-  let emojiValue = document.querySelector(".emoji");
-  emojiValue.innerHTML = "🛰️";
+  let iconValue = document.querySelector("#icon");
+  iconValue.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${weatherResult.data.weather[0].icon}@2x.png`
+  );
 }
 
 function citySearch(city) {
