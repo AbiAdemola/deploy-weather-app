@@ -61,7 +61,7 @@ h1 {
   color: #42a5f5;
   text-decoration: underline;
 }
-.spec {
+.city {
   font-size: bolder;
   position: relative;
   font-size: 40px;
@@ -72,7 +72,7 @@ h1 {
   margin: -3px -5px;
   color: #5a6275;
 }
-.specs {
+.temp-display {
   font-size: bolder;
   font-size: 40px;
   margin: 9px 80px;

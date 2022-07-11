@@ -1,19 +1,13 @@
 //
 
 let now = new Date();
-console.log(now);
-
 let date = now.getDate();
-console.log(date);
-
 let hours = now.getHours();
-console.log(hours);
 if (hours < 10) {
   hours = `0${hours}`;
 }
 
 let minutes = now.getMinutes();
-console.log(minutes);
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
@@ -25,10 +19,9 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
-console.log(day);
 
 let dayDated = document.querySelector(".date");
 dayDated.innerHTML = `${day} ${hours}:${minutes}`;
@@ -36,7 +29,7 @@ dayDated.innerHTML = `${day} ${hours}:${minutes}`;
 //
 
 function showWeatherCondition(weatherResult) {
-  document.querySelector(".spec").innerHTML = weatherResult.data.name;
+  document.querySelector(".city").innerHTML = weatherResult.data.name;
   document.querySelector(".celfah-data").innerHTML = Math.round(
     weatherResult.data.main.temp
   );
@@ -48,8 +41,8 @@ function showWeatherCondition(weatherResult) {
   document.querySelector(".wind").innerHTML = Math.round(
     weatherResult.data.wind.speed
   );
-  document.querySelector(".description").innerHTML =
-    weatherResult.data.weather[0].main;
+  document.querySelector(".weather-description").innerHTML =
+    weatherResult.data.weather[0].description;
   document.querySelector(".emoji").innerHTML = "🛰️";
 }
 function citySearch(city) {
