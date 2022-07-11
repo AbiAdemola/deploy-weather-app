@@ -132,6 +132,9 @@ h1 {
 .date-bgcolor {
   background-color: #eeeff1;
 }
+.weather-description {
+  text-transform: capitalize;
+}
 .emoji {
   font-size: 35px;
 }

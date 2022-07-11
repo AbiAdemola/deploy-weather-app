@@ -29,22 +29,28 @@ dayDated.innerHTML = `${day} ${hours}:${minutes}`;
 //
 
 function showWeatherCondition(weatherResult) {
-  document.querySelector(".city").innerHTML = weatherResult.data.name;
-  document.querySelector(".celfah-data").innerHTML = Math.round(
-    weatherResult.data.main.temp
-  );
-  console.log(weatherResult);
-  document.querySelector(".pressure").innerHTML =
-    weatherResult.data.main.pressure;
-  document.querySelector(".humidity").innerHTML =
-    weatherResult.data.main.humidity;
-  document.querySelector(".wind").innerHTML = Math.round(
-    weatherResult.data.wind.speed
-  );
-  document.querySelector(".weather-description").innerHTML =
-    weatherResult.data.weather[0].description;
-  document.querySelector(".emoji").innerHTML = "🛰️";
+  let cityValue = document.querySelector(".city");
+  cityValue.innerHTML = weatherResult.data.name;
+
+  let celfahValue = document.querySelector(".celfah-data");
+  celfahValue.innerHTML = Math.round(weatherResult.data.main.temp);
+
+  let pressureValue = document.querySelector("#pressure");
+  pressureValue.innerHTML = weatherResult.data.main.pressure;
+
+  let humidityValue = document.querySelector("#humidity");
+  humidityValue.innerHTML = weatherResult.data.main.humidity;
+
+  let windValue = document.querySelector("#wind");
+  windValue.innerHTML = Math.round(weatherResult.data.wind.speed);
+
+  let descriptionValue = document.querySelector(".weather-description");
+  descriptionValue.innerHTML = weatherResult.data.weather[0].description;
+
+  let emojiValue = document.querySelector(".emoji");
+  emojiValue.innerHTML = "🛰️";
 }
+
 function citySearch(city) {
   console.log(city);
   let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
