@@ -32,10 +32,10 @@ function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
   cityValue.innerHTML = weatherResult.data.name;
 
-  celciusTemp = weatherResult.data.main.temp;
+  celciusTemperature = weatherResult.data.main.temp;
 
   let temperatureValue = document.querySelector(".temperature-data");
-  temperatureValue.innerHTML = Math.round(celciusTemp);
+  temperatureValue.innerHTML = Math.round(celciusTemperature);
 
   let pressureValue = document.querySelector("#pressure");
   pressureValue.innerHTML = weatherResult.data.main.pressure;
