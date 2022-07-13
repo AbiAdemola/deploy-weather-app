@@ -63,14 +63,14 @@ function citySearch(city) {
 }
 
 //
-
-function weatherSearch(push) {
-  push.preventDefault();
+function weatherSearch(search) {
+  search.preventDefault();
   let searchInput = document.querySelector(".form-control");
   let city = `${searchInput.value}`;
-
   citySearch(city);
 }
+citySearch("Salford");
+
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", weatherSearch);
 
