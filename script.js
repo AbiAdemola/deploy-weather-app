@@ -34,8 +34,8 @@ function showWeatherCondition(weatherResult) {
 
   celciusTemp = weatherResult.data.main.temp;
 
-  let celfahValue = document.querySelector(".celfah-data");
-  celfahValue.innerHTML = Math.round(celciusTemp);
+  let temperatureValue = document.querySelector(".temperature-data");
+  temperatureValue.innerHTML = Math.round(celciusTemp);
 
   let pressureValue = document.querySelector("#pressure");
   pressureValue.innerHTML = weatherResult.data.main.pressure;
@@ -89,7 +89,7 @@ myCurrentLocation.addEventListener("click", getMyCurrentLocation);
 
 function fahrenheitTemp(value) {
   value.preventDefault();
-  let units = document.querySelector(".celfah-data");
+  let units = document.querySelector(".temperature-data");
   units.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
 }
 let celsiusTemp = null;
