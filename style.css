@@ -100,12 +100,15 @@ h1 {
 .active:hover {
   text-decoration: none;
 }
+.temperature-data {
+  margin: -5px;
+}
 .units {
   font-size: 18px;
   color: #42a5f5;
   position: relative;
   top: -15px;
-  margin: -2px;
+  margin: 3px;
 }
 .forecast {
   display: block;
