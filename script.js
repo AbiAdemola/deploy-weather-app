@@ -32,8 +32,10 @@ function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
   cityValue.innerHTML = weatherResult.data.name;
 
+  celciusTemp = weatherResult.data.main.temp;
+
   let celfahValue = document.querySelector(".celfah-data");
-  celfahValue.innerHTML = Math.round(weatherResult.data.main.temp);
+  celfahValue.innerHTML = Math.round(celciusTemp);
 
   let pressureValue = document.querySelector("#pressure");
   pressureValue.innerHTML = weatherResult.data.main.pressure;
@@ -69,10 +71,6 @@ function weatherSearch(search) {
   let city = `${searchInput.value}`;
   citySearch(city);
 }
-citySearch("Salford");
-
-let form = document.querySelector(".search-form");
-form.addEventListener("submit", weatherSearch);
 
 function searchLocation(mylocation) {
   let apiKey = "b785eaa2a07ee94e53f57f59eb305d73";
@@ -89,19 +87,17 @@ myCurrentLocation.addEventListener("click", getMyCurrentLocation);
 
 //
 
-function unitChangeClick(caller) {
-  caller.preventDefault();
+function fahrenheitTemp(value) {
+  value.preventDefault();
   let units = document.querySelector(".celfah-data");
-  units.innerHTML = 11;
+  units.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
 }
-function unitChangeClicker(called) {
-  called.preventDefault();
-  let units = document.querySelector(".celfah-data");
-  let fahconvert = units.innerHTML;
-  units.innerHTML = Math.round((fahconvert * 9) / 5 + 32);
-}
-let celsius = document.querySelector("#celcius");
-celsius.addEventListener("click", unitChangeClick);
+let celsiusTemp = null;
+
+citySearch("Salford");
+
+let form = document.querySelector(".search-form");
+form.addEventListener("submit", weatherSearch);
 
 let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", unitChangeClicker);
+fahrenheit.addEventListener("click", fahrenheitTemp);
