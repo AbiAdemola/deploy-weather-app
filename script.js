@@ -32,10 +32,10 @@ function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
   cityValue.innerHTML = weatherResult.data.name;
 
-  celciusTemperature = weatherResult.data.main.temp;
+  celsiusTemperature = weatherResult.data.main.temp;
 
   let temperatureValue = document.querySelector(".temperature-data");
-  temperatureValue.innerHTML = Math.round(celciusTemperature);
+  temperatureValue.innerHTML = Math.round(celsiusTemperature);
 
   let pressureValue = document.querySelector("#pressure");
   pressureValue.innerHTML = weatherResult.data.main.pressure;
@@ -87,14 +87,14 @@ myCurrentLocation.addEventListener("click", getMyCurrentLocation);
 
 //
 
-function celciusTemp(valueCelcius) {
+function celsiusTemp(valueCelcius) {
   valueCelcius.preventDefault();
 
   celsius.classList.add("active");
   fahrenheit.classList.remove("active");
 
   let units = document.querySelector(".temperature-data");
-  units.innerHTML = Math.round(celciusTemperature);
+  units.innerHTML = Math.round(celsiusTemperature);
 }
 
 function fahrenheitTemp(valueFahrenheit) {
@@ -104,18 +104,18 @@ function fahrenheitTemp(valueFahrenheit) {
   fahrenheit.classList.add("active");
 
   let units = document.querySelector(".temperature-data");
-  units.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
+  units.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
 citySearch("Salford");
 
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", weatherSearch);
 
-let celsius = document.querySelector("#celcius");
-celsius.addEventListener("click", celciusTemp);
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", celsiusTemp);
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", fahrenheitTemp);
