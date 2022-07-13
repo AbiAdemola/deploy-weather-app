@@ -44,7 +44,7 @@ function showWeatherCondition(weatherResult) {
   let windValue = document.querySelector("#wind");
   windValue.innerHTML = Math.round(weatherResult.data.wind.speed);
 
-  let descriptionValue = document.querySelector(".weather-description");
+  let descriptionValue = document.querySelector("#weatherdescription");
   descriptionValue.innerHTML = weatherResult.data.weather[0].description;
 
   let iconValue = document.querySelector("#icon");

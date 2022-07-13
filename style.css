@@ -133,7 +133,7 @@ h1 {
 .date-bgcolor {
   background-color: #eeeff1;
 }
-.weather-description {
+#weatherdescription {
   text-transform: capitalize;
 }
 .emoji {
