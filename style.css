@@ -93,6 +93,13 @@ h1 {
   padding: 5px;
   border-width: 6px;
 }
+.active {
+  color: #5a6275;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
 .units {
   font-size: 18px;
   color: #42a5f5;

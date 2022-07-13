@@ -89,12 +89,20 @@ myCurrentLocation.addEventListener("click", getMyCurrentLocation);
 
 function celciusTemp(valueCelcius) {
   valueCelcius.preventDefault();
+
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+
   let units = document.querySelector(".temperature-data");
   units.innerHTML = Math.round(celciusTemperature);
 }
 
 function fahrenheitTemp(valueFahrenheit) {
   valueFahrenheit.preventDefault();
+
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+
   let units = document.querySelector(".temperature-data");
   units.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
 }
