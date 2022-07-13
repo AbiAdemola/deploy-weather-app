@@ -87,17 +87,27 @@ myCurrentLocation.addEventListener("click", getMyCurrentLocation);
 
 //
 
-function fahrenheitTemp(value) {
-  value.preventDefault();
+function celciusTemp(valueCelcius) {
+  valueCelcius.preventDefault();
   let units = document.querySelector(".temperature-data");
-  units.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
+  units.innerHTML = Math.round(celciusTemperature);
 }
-let celsiusTemp = null;
+
+function fahrenheitTemp(valueFahrenheit) {
+  valueFahrenheit.preventDefault();
+  let units = document.querySelector(".temperature-data");
+  units.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
+}
+
+let celciusTemperature = null;
 
 citySearch("Salford");
 
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", weatherSearch);
+
+let celsius = document.querySelector("#celcius");
+celsius.addEventListener("click", celciusTemp);
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", fahrenheitTemp);
