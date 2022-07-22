@@ -26,8 +26,10 @@ let day = days[now.getDay()];
 let dayDated = document.querySelector(".date");
 dayDated.innerHTML = `${day} ${hours}:${minutes}`;
 
-//
-function displayForecast() {
+//        //
+function displayDailyForecast(response) {
+  console.log(response);
+
   let forecastElement = document.querySelector("#future-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -37,7 +39,7 @@ function displayForecast() {
       forecastHTML +
       `
   <div class="col col-2">
-    <strong class="day-date" id="future-forecast"> Thurs 02</strong>
+    <strong class="day-date" id="future-forecast">${day}</strong>
     <br /><span class="future-icon"> <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon"/> </span> <br />
     <span id="max-temperature"> 18°C </span> <span id="min-temperature"> 11℃</span>
   </div>`;
@@ -46,17 +48,30 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
+displayDailyForecast();
+
+//        //
+
+function getFutureForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "b785eaa2a07ee94e53f57f59eb305d73";
+  let apiLink = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiLink);
+  axios.get(apiLink).then(displayDailyForecast);
+}
+
 //
 
 function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
   cityValue.innerHTML = weatherResult.data.name;
 
-  celsiusTemperature = weatherResult.data.main.temp;
+  celciusTemperature = weatherResult.data.main.temp;
 
   let temperatureValue = document.querySelector(".temperature-data");
-  temperatureValue.innerHTML = Math.round(celsiusTemperature);
+  temperatureValue.innerHTML = Math.round(celciusTemperature);
+
+  console.log(weatherResult);
 
   let pressureValue = document.querySelector("#pressure");
   pressureValue.innerHTML = weatherResult.data.main.pressure;
@@ -76,6 +91,7 @@ function showWeatherCondition(weatherResult) {
     `http://openweathermap.org/img/wn/${weatherResult.data.weather[0].icon}@2x.png`
   );
   iconValue.setAttribute("alt", weatherResult.data.weather[0].description);
+  getFutureForecast(weatherResult.data.coord);
 }
 
 function citySearch(city) {
