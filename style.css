@@ -119,20 +119,22 @@ h1 {
   margin: 35px 15px;
   margin-right: 556px;
   margin-left: -6px;
+  margin-bottom: 38px;
 }
 .col {
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 14px;
   border: solid;
   border-radius: 2px;
-  border-width: 6px;
+  border-width: 3px;
   border-color: #daedfd;
   margin-top: -25px;
   margin-bottom: -10px;
-  margin-right: -12px;
+  margin-right: -9px;
   margin-left: 6px;
-  padding-right: 30px;
-  padding-left: 20px;
+  padding-right: 7px;
+  padding-left: 2px;
   color: #5a6275;
 }
 .eight {
@@ -140,14 +142,27 @@ h1 {
   border-right: -6px;
   margin-right: 10px;
 }
-.date-bgcolor {
+.day-date {
   background-color: #eeeff1;
 }
 #weatherdescription {
   text-transform: capitalize;
 }
+#min-temperature {
+  font-weight: lighter;
+  color: #5a6275;
+  opacity: 0.6;
+}
+#max-temperature {
+  font-weight: 550;
+  opacity: 0.85;
+}
 .emoji {
   font-size: 35px;
+}
+.future-icon {
+  position: relative;
+  margin: -15px;
 }
 .user {
   text-align: center;

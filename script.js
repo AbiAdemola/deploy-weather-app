@@ -27,6 +27,27 @@ let dayDated = document.querySelector(".date");
 dayDated.innerHTML = `${day} ${hours}:${minutes}`;
 
 //
+function displayForecast() {
+  let forecastElement = document.querySelector("#future-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col col-2">
+    <strong class="day-date" id="future-forecast"> Thurs 02</strong>
+    <br /><span class="future-icon"> <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon"/> </span> <br />
+    <span id="max-temperature"> 18°C </span> <span id="min-temperature"> 11℃</span>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
+//
 
 function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
