@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  margin-top: 80px;
+  margin-top: 155px;
 }
 .full-page {
   background-position: center center;
@@ -49,8 +49,8 @@ h1 {
 }
 .btn:hover {
   cursor: pointer;
-  background-color: #e8f3dc;
-  color: #42a5f5;
+  background-color: rgba(243, 243, 250, 0.829);
+  color: #4883b4;
   font-weight: bolder;
 }
 .form-control {
@@ -60,7 +60,7 @@ h1 {
   border-width: 6px;
   margin-left: -5px;
   padding: 21px 20px;
-
+  box-shadow: 0 30px 50px rgba(38, 30, 58, 0.08);
   margin-top: 70px;
 }
 .current-location {
@@ -71,7 +71,7 @@ h1 {
   border-radius: 13px;
   margin-left: 379px;
   color: #5a6275;
-  background-color: #eeeff1;
+  background-color: #eeeff18f;
 }
 .current-location:hover {
   cursor: pointer;
@@ -109,6 +109,7 @@ h1 {
   margin-left: -128px;
   padding: 5px;
   border-width: 3px;
+  box-shadow: 0 30px 50px rgba(38, 30, 58, 0.08);
 }
 .active {
   color: #5a6275;
