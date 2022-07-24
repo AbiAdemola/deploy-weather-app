@@ -1,18 +1,33 @@
 body {
   font-family: sans-serif;
+  margin-top: 80px;
+}
+.full-page {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+.page-card {
+  position: relative;
   margin: 0 auto;
-  margin-top: 55px;
+  background: linear-gradient(
+    2deg,
+    rgba(223, 223, 235, 0.445) 51.5%,
+    rgba(19, 41, 165, 0.308) 86.8%
+  );
   max-width: 800px;
-
   padding: 50px 50px;
   border: solid;
-  border-width: 6px;
-  border-color: #e9ebee;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: #e9ebeeb9;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
+
 h1 {
-  color: #42a5f5;
+  color: #4884b4;
   text-align: center;
-  background-color: #edf6fe;
+
   font-weight: bold;
   font-size: 25px;
   font-family: atkiv Grotesk;
@@ -22,9 +37,9 @@ h1 {
 
 .btn {
   display: block;
-  background-color: #42a5f5;
+  background-color: #4884b4;
   color: white;
-  border-radius: 3px;
+  border-radius: 13px;
   padding: 12px 30px;
   margin: -52px 573px;
 
@@ -40,8 +55,8 @@ h1 {
 }
 .form-control {
   border: solid;
-  border-radius: 1px;
-  border-color: #e8f3dc;
+  border-radius: 13px;
+  border-color: #f5faf131;
   border-width: 6px;
   margin-left: -5px;
   padding: 21px 20px;
@@ -52,8 +67,9 @@ h1 {
   margin-top: 40px;
   margin-bottom: 55px;
   padding: 1px;
-  margin-right: 124px;
-  margin-left: 372px;
+  margin-right: 122px;
+  border-radius: 13px;
+  margin-left: 379px;
   color: #5a6275;
   background-color: #eeeff1;
 }
@@ -87,12 +103,12 @@ h1 {
 }
 .degree {
   border: solid;
-  border-color: #e8f3dc;
-  border-radius: 2px;
+  border-color: #ced6e6;
+  border-radius: 13px;
   margin: -20px -220px;
   margin-left: -128px;
   padding: 5px;
-  border-width: 6px;
+  border-width: 3px;
 }
 .active {
   color: #5a6275;
@@ -106,20 +122,20 @@ h1 {
 }
 .units {
   font-size: 18px;
-  color: #42a5f5;
+  color: #4883b4;
   position: relative;
   top: -15px;
   margin: 3px;
 }
 .forecast {
   display: block;
-  color: #42a5f5;
-  background-color: #edf6fe;
+  color: #4883b4;
+  background-color: #bed0df41;
   font-size: 22px;
-  padding: -3px;
-  margin: 35px 15px;
-  margin-right: 556px;
-  margin-left: -6px;
+  border-radius: 13px;
+  margin: 35px;
+  margin-right: 565px;
+  margin-left: -5px;
   margin-bottom: 38px;
 }
 .col {
@@ -127,9 +143,9 @@ h1 {
   font-weight: 500;
   font-size: 14px;
   border: solid;
-  border-radius: 2px;
-  border-width: 3px;
-  border-color: #daedfd;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: #daedfd81;
   margin-top: -25px;
   margin-bottom: -10px;
   margin-right: -9px;
@@ -144,7 +160,7 @@ h1 {
   margin-right: 10px;
 }
 .day-date {
-  background-color: #eeeff1;
+  background-color: #fafbfc36;
 }
 #weatherdescription {
   text-transform: capitalize;
@@ -156,7 +172,6 @@ h1 {
 }
 #max-temperature {
   font-weight: 550;
-  opacity: 0.85;
 }
 .emoji {
   font-size: 35px;
@@ -172,7 +187,7 @@ footer {
   color: #5a6275;
 }
 .coder {
-  background-color: #eeeff1;
+  background-color: #d6d8dd77;
   color: rgb(59, 56, 56);
 }
 .coder:hover {
