@@ -3,6 +3,7 @@ body {
   margin: 0 auto;
   margin-top: 55px;
   max-width: 800px;
+
   padding: 50px 50px;
   border: solid;
   border-width: 6px;
@@ -164,47 +165,6 @@ h1 {
   position: relative;
   margin: -15px;
 }
-.user {
-  text-align: center;
-  color: #5a6275;
-  border: solid;
-  border-radius: 1px;
-  border-color: #e8f3dc;
-  border-width: 6px;
-  border-right: -19px;
-  border-left: -25px;
-  margin-right: -8px;
-  margin-left: -8px;
-  padding-left: 2px;
-}
-.personalise {
-  background-color: #e8f3dc;
-  font-size: 19px;
-  color: rgb(59, 56, 56);
-}
-.owned {
-  border: solid;
-  border-width: 6px;
-  border-color: #e8f3dc;
-  border-radius: 2px;
-  margin: 12px 242px;
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-.register {
-  border: none;
-  background-color: #eeeff1;
-  margin: 12px -240px;
-}
-.register:hover {
-  font-weight: bold;
-  color: #42a5f5;
-}
-.owned:hover {
-  font-weight: bold;
-  color: white;
-  background-color: #42a5f5;
-}
 footer {
   text-align: center;
   margin-bottom: -50px;
@@ -219,10 +179,4 @@ footer {
   cursor: pointer;
   background-color: #42a5f5;
   color: white;
-}
-.open-source {
-  color: #42a5f5;
-}
-.open-source:hover {
-  background-color: #e8f3dc;
 }
