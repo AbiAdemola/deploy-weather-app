@@ -42,7 +42,6 @@ h1 {
   border-radius: 13px;
   padding: 12px 30px;
   margin: -52px 573px;
-
   font-size: 18px;
   font-weight: bold;
   margin-top: -54px;
@@ -71,7 +70,7 @@ h1 {
   border-radius: 13px;
   margin-left: 379px;
   color: #5a6275;
-  background-color: #eeeff18f;
+  background-color: #eeeff15b;
 }
 .current-location:hover {
   cursor: pointer;
@@ -128,6 +127,9 @@ h1 {
   top: -15px;
   margin: 3px;
 }
+#fahrenheit {
+  color: #448bf5;
+}
 .forecast {
   display: block;
   color: #4883b4;
@@ -146,7 +148,7 @@ h1 {
   border: solid;
   border-radius: 15px;
   border-width: 2px;
-  border-color: #daedfd81;
+  border-color: #ced6e663;
   margin-top: -25px;
   margin-bottom: -10px;
   margin-right: -9px;
@@ -154,6 +156,8 @@ h1 {
   padding-right: 7px;
   padding-left: 2px;
   color: #5a6275;
+  box-shadow: 0 30px 50px rgba(54, 44, 80, 0.08);
+  background-color: #9886ac13;
 }
 .eight {
   border: -1px;
