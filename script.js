@@ -23,7 +23,30 @@ function getDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-//        //
+// month and year //
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let now = new Date();
+let month = months[now.getMonth()];
+let date = now.getDate();
+let year = now.getFullYear();
+let fullDateValue = document.querySelector("#monthYear");
+fullDateValue.innerHTML = `${month} ${date}, ${year}`;
+
+//   Future Daily Forecast   //
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -83,6 +106,7 @@ function showWeatherCondition(weatherResult) {
   temperatureValue.innerHTML = Math.round(celciusTemperature);
 
   let dateValue = document.querySelector("#date");
+  console.log(weatherResult);
   dateValue.innerHTML = getDate(weatherResult.data.dt * 1000);
 
   let pressureValue = document.querySelector("#pressure");

@@ -2,11 +2,6 @@ body {
   font-family: sans-serif;
   margin-top: 155px;
 }
-.full-page {
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: 100%;
-}
 .page-card {
   position: relative;
   margin: 0 auto;
@@ -169,6 +164,8 @@ h1 {
 }
 #weatherdescription {
   text-transform: capitalize;
+  font-weight: 500;
+  background-color: #9886ac18;
 }
 #min-temperature {
   font-weight: lighter;
