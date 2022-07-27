@@ -102,11 +102,12 @@ function showWeatherCondition(weatherResult) {
   let cityValue = document.querySelector(".city");
   cityValue.innerHTML = weatherResult.data.name;
 
+  celciusTemperature = weatherResult.data.main.temp;
+
   let temperatureValue = document.querySelector(".temperature-data");
   temperatureValue.innerHTML = Math.round(celciusTemperature);
 
   let dateValue = document.querySelector("#date");
-  console.log(weatherResult);
   dateValue.innerHTML = getDate(weatherResult.data.dt * 1000);
 
   let pressureValue = document.querySelector("#pressure");
@@ -128,14 +129,11 @@ function showWeatherCondition(weatherResult) {
   );
   iconValue.setAttribute("alt", weatherResult.data.weather[0].description);
   getFutureForecast(weatherResult.data.coord);
-
-  celciusTemperature = weatherResult.data.main.temp;
 }
 
 // City //
 
 function citySearch(city) {
-  console.log(city);
   let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   let apiKey = "b785eaa2a07ee94e53f57f59eb305d73";
   axios.get(`${apiLink}&appid=${apiKey}`).then(showWeatherCondition);
